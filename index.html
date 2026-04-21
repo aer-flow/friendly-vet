@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friendly Vet | Clinica Veterinara in Timișoara</title>
+    <meta name="description"
+        content="Friendly Vet ofera ingrijire veterinara moderna in Timișoara, cu accent pe empatie, transparenta si tratamente corecte pentru companionul tau.">
+
+    <!-- SEO & Social Media (OpenGraph) -->
+    <meta property="og:title" content="Friendly Vet | Clinica Veterinara">
+    <meta property="og:description"
+        content="Friendly Vet ofera servicii veterinare complete in Timișoara, intr-un spatiu calm si atent construit pentru animale si oameni.">
+    <meta property="og:url" content="https://friendly-vet.vercel.app/">
+    <meta property="og:image" content="https://friendly-vet.vercel.app/img/brand-preview.png">
+    <meta property="og:type" content="website">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://friendly-vet.vercel.app/">
+    <meta property="twitter:title" content="Friendly Vet | Clinica Veterinara">
+    <meta property="twitter:description"
+        content="Friendly Vet ofera servicii veterinare complete in Timișoara, intr-un spatiu calm si atent construit pentru animale si oameni.">
+    <meta property="twitter:image" content="https://friendly-vet.vercel.app/img/brand-preview.png">
+
+    <!-- JSON-LD Structured Data: LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VeterinaryCare",
+      "name": "Friendly Vet",
+      "image": "https://friendly-vet.vercel.app/img/brand-preview.png",
+      "@id": "",
+      "url": "https://friendly-vet.vercel.app/",
+      "telephone": "0756 088 864",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "str. Martir Cernăianu nr. 21, Timișoara, Timiș, Romania",
+        "addressLocality": "Timișoara",
+        "addressCountry": "RO"
+      }
+    }
+    </script>
+
+    <!-- Performance & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Jost:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=1.0.23">
+
+    <!-- Favicon & PWA -->
+    <link rel="icon" href="img/brand-logo.png">
+    <link rel="apple-touch-icon" href="img/brand-logo.png">
+
+    <!-- GSAP Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- BANNER URGENȚE -->
+    <div class="emergency-banner" id="top">
+        <div class="pulse-icon"></div>
+        Urgențe veterinare non-stop: <a href="tel:0756088864"
+            style="text-decoration: underline; color: white;">0756 088 864</a>
+    </div>
+
+    <!-- HEADER -->
+    <header id="navbar">
+        <a href="#" class="logo">
+            <img src="img/brand-logo.png" alt="Logo Friendly Vet" class="logo-mark" loading="eager" decoding="async">
+            <span class="logo-name">Friendly Vet</span>
+        </a>
+        <nav class="nav-links" id="mobile-nav">
+            <a href="#despre-noi">Despre Noi</a>
+            <a href="#servicii">Servicii</a>
+            <a href="tarife.html">Tarife</a>
+            <a href="#echipa">Echipa</a>
+            <a href="#programare" class="btn btn-emerald" style="padding: 10px 24px; font-size: 0.95rem;">Programare</a>
+        </nav>
+        <button class="mobile-menu" type="button" aria-label="Deschide meniul" aria-expanded="false" aria-controls="mobile-nav">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- HERO SECTION FULLSCREEN ANIMAT -->
+    <section id="acasa" class="hero-fullscreen">
+        <div class="hero-image-wrapper">
+            <img class="hero-slide is-active" src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=1920&q=80" alt="Medic veterinar alături de un bulldog"
+                loading="eager" decoding="async">
+            <img class="hero-slide" src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1920&q=80" alt="Medic veterinar consultând un cățel"
+                loading="eager" decoding="async">
+            <img class="hero-slide slide-three" src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=1920&q=80" alt="Cățel fericit în cabinetul veterinar"
+                loading="eager" decoding="async">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-text-content">
+            <span class="hero-subtitle" id="hero-subtitle">Friendly Vet, alături de tine când contează</span>
+            <h1 class="hero-title" id="hero-title">
+                <span class="line">Îngrijire completă</span><br>
+                <span class="line">pentru sănătatea lui</span>
+            </h1>
+            <p class="hero-desc" id="hero-desc">Lucrăm atent, explicăm simplu și tratăm responsabil, astfel încât să știi exact ce se întâmplă și ce ai de făcut.</p>
+            <div id="hero-cta">
+                <a href="#programare" class="btn btn-emerald">Programează o vizită</a>
+            </div>
+        </div>
+        <div class="hero-bottom-wave" aria-hidden="true">
+            <svg viewBox="0 0 1440 170" preserveAspectRatio="none">
+                <path d="M0,96 C110,160 246,162 394,118 C550,72 676,18 838,34 C1000,50 1132,132 1250,138 C1332,142 1398,122 1440,102 L1440,170 L0,170 Z" fill="#E9F5DB"></path>
+                <path d="M0,96 C110,160 246,162 394,118 C550,72 676,18 838,34 C1000,50 1132,132 1250,138 C1332,142 1398,122 1440,102" fill="none" stroke="#f1c746" stroke-width="5" stroke-linecap="round"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- STATS BAR: SOCIAL PROOF -->
+    <section class="stats-bar">
+        <div class="container stats-grid">
+            <div class="stat-item reveal">
+                <span class="stat-number" data-target="15">0</span><span class="stat-plus">+</span>
+                <p class="stat-label">Ani de Experiență</p>
+            </div>
+            <div class="stat-item reveal">
+                <span class="stat-number" data-target="5000">0</span><span class="stat-plus">+</span>
+                <p class="stat-label">Pacienți Fericiți</p>
+            </div>
+            <div class="stat-item reveal">
+                <span class="stat-number" data-target="12">0</span>
+                <p class="stat-label">Specialiști Elite</p>
+            </div>
+            <div class="stat-item reveal">
+                <span class="stat-number" data-target="24">0</span><span class="stat-plus">/7</span>
+                <p class="stat-label">Asistență Urgențe</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: DESPRE NOI -->
+    <section id="despre-noi" class="section-padding philosophy-section">
+        <div class="container">
+            <div class="philosophy-shell">
+                <div class="philosophy-copy">
+                    <span class="badge reveal">Despre Noi</span>
+                    <h2 class="reveal">Vizite medicale mai calme, explicații mai clare, decizii mai sigure</h2>
+                    <p class="reveal">La Friendly Vet, consultația nu începe cu grabă și nu se termină cu incertitudine.
+                        Construim fiecare vizită în jurul confortului animalului și al clarității pentru familie.</p>
+                    <p class="reveal delay-1">Îți explicăm clar ce observăm, ce investigații recomandăm și care sunt
+                        pașii următori, astfel încât să poți lua decizii informate pentru animalul tău.</p>
+
+                    <div class="philosophy-actions reveal delay-2">
+                        <div class="philosophy-trust">
+                            <i class="fa-solid fa-shield-heart"></i>
+                            <span>Consultații blânde, monitorizare atentă și planuri de tratament explicate pe înțeles.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="philosophy-visual reveal delay-1">
+                    <div class="philosophy-portrait-frame">
+                        <div class="philosophy-portrait">
+                            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=900&q=80"
+                                alt="Medic veterinar Friendly Vet" loading="lazy">
+                        </div>
+                        <div class="philosophy-note note-top">
+                            <strong>Fear-Free</strong>
+                            <span>Manipulare blândă și ritm adaptat fiecărui pacient.</span>
+                        </div>
+                        <div class="philosophy-note note-bottom">
+                            <strong>Grijă coordonată</strong>
+                            <span>Diagnostic, tratament și urmărire în aceeași echipă.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="philosophy-pillars">
+                <article class="philosophy-pillar reveal">
+                    <div class="pillar-icon"><i class="fa-solid fa-heart-circle-check"></i></div>
+                    <h3>Atmosferă Calmă</h3>
+                    <p>Reducem stresul prin spații prietenoase, manipulare atentă și consultații fără presiune inutilă.</p>
+                </article>
+
+                <article class="philosophy-pillar reveal delay-1">
+                    <div class="pillar-icon"><i class="fa-solid fa-comments"></i></div>
+                    <h3>Comunicare Clară</h3>
+                    <p>Primești explicații concrete despre analize, opțiuni de tratament, costuri și pașii următori.</p>
+                </article>
+
+                <article class="philosophy-pillar reveal delay-2">
+                    <div class="pillar-icon"><i class="fa-solid fa-stethoscope"></i></div>
+                    <h3>Diagnostic Precis</h3>
+                    <p>Folosim evaluare clinică riguroasă și investigații moderne pentru decizii rapide și corecte.</p>
+                </article>
+
+                <article class="philosophy-pillar reveal delay-1">
+                    <div class="pillar-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                    <h3>Parteneriat Real</h3>
+                    <p>Lucrăm împreună cu tine pe termen lung, nu doar punctual, pentru prevenție și recuperare bună.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICII MEDICALE -->
+    <section id="servicii" class="section-padding services-section">
+        <div class="services-hero-full reveal">
+            <div class="services-hero-top-wave" aria-hidden="true">
+                <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                    <path d="M0,70 C220,120 390,8 645,48 C905,88 1120,126 1440,68 L1440,120 L0,120 Z" fill="#fff6de"></path>
+                    <path d="M0,70 C220,120 390,8 645,48 C905,88 1120,126 1440,68" fill="none" stroke="#f1c746" stroke-width="8" stroke-linecap="round"></path>
+                </svg>
+            </div>
+            <div class="container services-hero-layout">
+                <div class="services-hero-copy">
+                    <span class="badge">Servicii Friendly Vet</span>
+                    <h2>Consultații, diagnostic și tratamente pentru fiecare etapă din viața animalului tău</h2>
+                    <p>La Friendly Vet găsești servicii veterinare complete, de la controale de rutină și prevenție până la
+                        investigații, intervenții și monitorizare atentă după tratament.</p>
+                </div>
+
+                <div class="services-hero-visual">
+                    <div class="services-photo photo-main">
+                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=900&q=80"
+                            alt="Câine fericit în cabinet" loading="lazy">
+                    </div>
+                    <div class="services-photo photo-top">
+                        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=700&q=80"
+                            alt="Pisică relaxată" loading="lazy">
+                    </div>
+                    <div class="services-photo photo-bottom">
+                        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=700&q=80"
+                            alt="Cățel pregătit de consultație" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-hero-wave" aria-hidden="true">
+                <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                    <path d="M0,0 L0,70 C220,120 390,8 645,48 C905,88 1120,126 1440,68 L1440,0 Z" fill="#fff7e5"></path>
+                    <path d="M0,70 C220,120 390,8 645,48 C905,88 1120,126 1440,68" fill="none" stroke="#f1c746" stroke-width="8" stroke-linecap="round"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATALOG SERVICII -->
+    <section id="catalog-servicii" class="section-padding catalog-section">
+        <div class="container services-catalog">
+            <div class="services-poster-grid reveal">
+                <a href="consultatii.html" class="service-poster poster-sky">
+                    <span class="service-poster-eyebrow">Consultații</span>
+                    <h3>Consultații & Profilaxie</h3>
+                    <p>Evaluări complete, prevenție personalizată și recomandări clare pentru viața de zi cu zi.</p>
+                    <div class="service-poster-image">
+                        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=800&q=80"
+                            alt="Consultații veterinare" loading="lazy">
+                    </div>
+                    <span class="service-poster-link">Vezi detalii <i class="fa-solid fa-arrow-right-long"></i></span>
+                </a>
+
+                <a href="diagnostic.html" class="service-poster poster-cream">
+                    <span class="service-poster-eyebrow">Diagnostic</span>
+                    <h3>Analize & Investigații</h3>
+                    <p>Rezultate rapide, interpretate corect, pentru decizii medicale sigure și bine argumentate.</p>
+                    <div class="service-poster-image">
+                        <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=800&q=80"
+                            alt="Diagnostic veterinar" loading="lazy">
+                    </div>
+                    <span class="service-poster-link">Vezi detalii <i class="fa-solid fa-arrow-right-long"></i></span>
+                </a>
+
+                <a href="service-detail.html" class="service-poster poster-coral">
+                    <span class="service-poster-eyebrow">Chirurgie</span>
+                    <h3>Chirurgie & Monitorizare</h3>
+                    <p>Intervenții într-un cadru sigur, cu anestezie atent supravegheată și follow-up postoperator.</p>
+                    <div class="service-poster-image">
+                        <img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=800&q=80"
+                            alt="Chirurgie veterinară" loading="lazy">
+                    </div>
+                    <span class="service-poster-link">Vezi detalii <i class="fa-solid fa-arrow-right-long"></i></span>
+                </a>
+
+                <a href="farmacie.html" class="service-poster poster-mint">
+                    <span class="service-poster-eyebrow">Farmacie</span>
+                    <h3>Farmacie & Diete</h3>
+                    <p>Medicație, diete veterinare și recomandări practice pentru tratament și recuperare acasă.</p>
+                    <div class="service-poster-image">
+                        <img src="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?auto=format&fit=crop&w=800&q=80"
+                            alt="Farmacie și diete veterinare" loading="lazy">
+                    </div>
+                    <span class="service-poster-link">Vezi detalii <i class="fa-solid fa-arrow-right-long"></i></span>
+                </a>
+            </div>
+
+            <div class="service-ribbon-grid reveal delay-1">
+                <article class="service-ribbon ribbon-sand">
+                    <div class="service-ribbon-icon"><i class="fa-solid fa-tooth"></i></div>
+                    <div>
+                        <span class="service-ribbon-label">Îngrijire de finețe</span>
+                        <h3>Stomatologie</h3>
+                        <p>Detartraj, evaluări dentare și tratamente pentru confort, alimentație corectă și sănătate
+                            orală bună pe termen lung.</p>
+                    </div>
+                </article>
+
+                <article class="service-ribbon ribbon-leaf">
+                    <div class="service-ribbon-icon"><i class="fa-solid fa-syringe"></i></div>
+                    <div>
+                        <span class="service-ribbon-label">Prevenție & călătorii</span>
+                        <h3>Vaccinări & Pașapoarte</h3>
+                        <p>Protocoale de imunizare actualizate și documentație europeană pregătită corect pentru plecări
+                            fără stres.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ECHIPA -->
+    <section id="echipa" class="section-padding team-section">
+        <div class="team-wide reveal">
+            <div class="team-wide-top-wave" aria-hidden="true">
+                <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+                    <path d="M0,110 C118,44 250,18 392,54 C530,88 648,134 808,102 C952,72 1066,6 1190,26 C1302,44 1378,92 1440,76 L1440,150 L0,150 Z" fill="#c9e0f2"></path>
+                    <path d="M0,110 C118,44 250,18 392,54 C530,88 648,134 808,102 C952,72 1066,6 1190,26 C1302,44 1378,92 1440,76" fill="none" stroke="rgba(24,35,41,0.32)" stroke-width="4.5" stroke-linecap="round"></path>
+                </svg>
+            </div>
+            <div class="container team-wide-layout">
+                <div class="team-band-copy">
+                    <span class="badge">Medicii noștri</span>
+                    <h2>O echipă medicală atentă, experimentată și aproape de fiecare pacient</h2>
+                    <p>Fiecare medic din echipa noastră lucrează cu răbdare, atenție clinică și comunicare clară, astfel
+                        încât fiecare caz să primească tratamentul potrivit și urmărirea de care are nevoie.</p>
+                </div>
+
+                <div class="team-band-gallery">
+                    <figure class="team-portrait portrait-a">
+                        <div class="team-portrait-frame">
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=80"
+                                alt="Dr. Ana Pavel" loading="lazy">
+                        </div>
+                        <figcaption>
+                            <strong>Dr. Ana Pavel</strong>
+                            <span>Medic coordonator</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="team-portrait portrait-b">
+                        <div class="team-portrait-frame">
+                            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=800&q=80"
+                                alt="Dr. Maria Popescu" loading="lazy">
+                        </div>
+                        <figcaption>
+                            <strong>Dr. Maria Popescu</strong>
+                            <span>Chirurgie</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="team-portrait portrait-c">
+                        <div class="team-portrait-frame">
+                            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80"
+                                alt="Dr. Andrei Ionescu" loading="lazy">
+                        </div>
+                        <figcaption>
+                            <strong>Dr. Andrei Ionescu</strong>
+                            <span>Medicină internă</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="team-wide-bottom-wave" aria-hidden="true">
+                <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+                    <path d="M0,40 C118,106 250,132 392,96 C530,62 648,16 808,48 C952,78 1066,144 1190,124 C1302,106 1378,58 1440,74 L1440,0 L0,0 Z" fill="#a1c4df"></path>
+                    <path d="M0,40 C118,106 250,132 392,96 C530,62 648,16 808,48 C952,78 1066,144 1190,124 C1302,106 1378,58 1440,74" fill="none" stroke="rgba(24,35,41,0.32)" stroke-width="4.5" stroke-linecap="round"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SMART BOOKING FORM (PET-CENTRIC) -->
+    <section id="programare" class="section-padding booking-section">
+        <div class="booking-stage">
+            <div class="booking-container reveal">
+                <div class="booking-header">
+                    <span style="color: var(--secondary); font-weight: 700; letter-spacing: 2px;">REZERVARE ONLINE</span>
+                    <h2 style="font-size: 2.5rem; margin-top: 10px;">Hai să ne cunoaștem!</h2>
+                    <p>Completează detaliile de mai jos și te vom contacta în cel mai scurt timp pentru a stabili vizita.
+                    </p>
+                </div>
+
+                <form class="smart-form">
+                    <div class="form-group">
+                        <label>Cum îl cheamă pe prietenul blănos?</label>
+                        <input type="text" placeholder="Ex: Max, Luna..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Ce fel de animăluț este?</label>
+                        <select required>
+                            <option value="" disabled selected>Alege o opțiune</option>
+                            <option value="caine">Este un cățel 🐶</option>
+                            <option value="pisica">Este o pisicuță 🐱</option>
+                            <option value="exotic">Animal exotic / Păsări 🐰</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Numele tău (Stăpânul)</label>
+                        <input type="text" placeholder="Numele tău complet" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Număr de telefon</label>
+                        <input type="tel" placeholder="07xx xxx xxx" required>
+                    </div>
+
+                    <div class="form-group full">
+                        <label>Cu ce vă putem ajuta astăzi?</label>
+                        <textarea placeholder="Descrie scurt motivul vizitei (ex: vaccin anual, control, urgență...)"
+                            required></textarea>
+                    </div>
+
+                    <div class="form-group full" style="margin-top: 10px;">
+                        <button type="submit" class="btn btn-emerald"
+                            style="width: 100%; font-size: 1.1rem; padding: 20px;">Trimite Solicitarea de
+                            Programare</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="booking-mascot reveal delay-2" aria-hidden="true">
+                <div class="booking-mascot-bubble">Woof!</div>
+                <img src="booking-dog-cutout.png" alt="" loading="eager" fetchpriority="high" decoding="async">
+            </div>
+        </div>
+    </section>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/0756088864" target="_blank" class="float-wa">
+        <i class="fa-brands fa-whatsapp"></i>
+        <div class="wa-tooltip">Ai o întrebare rapidă? Discută cu un medic!</div>
+    </a>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="footer-top-wave" aria-hidden="true">
+            <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+                <path d="M0,86 C144,38 302,24 474,58 C652,92 798,140 958,116 C1118,92 1234,18 1348,26 C1392,30 1424,38 1440,46 L1440,150 L0,150 Z" fill="#170732"></path>
+                <path d="M0,86 C144,38 302,24 474,58 C652,92 798,140 958,116 C1118,92 1234,18 1348,26 C1392,30 1424,38 1440,46" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="4" stroke-linecap="round"></path>
+            </svg>
+        </div>
+        <div class="footer-grid">
+            <div>
+                <h3 class="footer-brand">
+                    <img src="img/brand-logo.png" alt="Logo Friendly Vet" class="footer-brand-logo" loading="lazy" decoding="async">
+                    <span>Friendly Vet</span>
+                </h3>
+                <p style="color: #A0B2C6; margin-bottom: 2rem;">Friendly Vet ofera consultatii, diagnostic si ingrijire veterinara atenta in Timișoara.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/maniuvet.ro" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p><i class="fa-solid fa-location-dot"></i> <span><strong>Adresa:</strong><br> str. Martir Cernăianu nr. 21, Timișoara, Timiș, Romania</span></p>
+                <p><i class="fa-solid fa-phone"></i> <span><strong>Telefon Urgențe:</strong><br> <a
+                            href="tel:0756088864">0756 088 864</a></span></p>
+                <p><i class="fa-solid fa-envelope"></i> <span><strong>Email:</strong><br> <a
+                            href="mailto:contact@example.com">contact@example.com</a></span></p>
+            </div>
+
+            <div>
+                <h3>Locație</h3>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps?q=str.%20Martir%20Cern%C4%83ianu%20nr.%2021%2C%20Timi%C8%99oara%2C%20Timi%C8%99%2C%20Romania&output=embed"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Friendly Vet. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="script.js?v=1.0.9"></script>
+</body>
+
+</html>

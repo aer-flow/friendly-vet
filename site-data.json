@@ -1,0 +1,21 @@
+{
+  "brand_tagline": "Clinica Veterinara",
+  "city": "Timișoara",
+  "site_url": "https://friendly-vet.vercel.app/",
+  "existing_website": "",
+  "has_existing_website": "nu",
+  "phone_display": "0756 088 864",
+  "email": "contact@example.com",
+  "address": "str. Martir Cernăianu nr. 21, Timișoara, Timiș, Romania",
+  "instagram_url": "#",
+  "facebook_url": "https://www.facebook.com/maniuvet.ro",
+  "linkedin_url": "#",
+  "copyright_year": "2026",
+  "brand_name": "Friendly Vet",
+  "logo_path": "img/brand-logo.png",
+  "preview_image_path": "img/brand-preview.png",
+  "phone_link": "0756088864",
+  "whatsapp_number": "0756088864",
+  "map_embed_url": "https://www.google.com/maps?q=str.%20Martir%20Cern%C4%83ianu%20nr.%2021%2C%20Timi%C8%99oara%2C%20Timi%C8%99%2C%20Romania&output=embed",
+  "og_image_url": "https://friendly-vet.vercel.app/img/brand-preview.png"
+}
