@@ -138,9 +138,9 @@ body {
     }
 
     .service-subpage-hero::before {
-        background-size: min(620px, 44vw) auto;
-        background-position: var(--subpage-hero-desktop-position, right 5vw bottom);
-        transform: none;
+        background-size: cover;
+        background-position: var(--subpage-hero-desktop-position, var(--subpage-hero-position, center));
+        transform: scale(1.03);
         filter: saturate(1.03) contrast(1.02);
     }
 
