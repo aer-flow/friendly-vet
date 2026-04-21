@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('navbar');
     const emergencyBanner = document.getElementById('top');
+    const isSubpage = document.body.classList.contains('subpage');
+
+    function updateMobileHeaderOffset() {
+        const mobileHeaderOffset = (!isSubpage && emergencyBanner) ? emergencyBanner.offsetHeight : 0;
+        document.documentElement.style.setProperty('--mobile-header-offset', `${mobileHeaderOffset}px`);
+    }
 
     // 0. HERO IMAGE ROTATOR
     function initHeroSlider() {
@@ -226,13 +232,27 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => revealObserver.observe(el));
 
     // 2. HEADER SCROLL EFFECT
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > (emergencyBanner ? emergencyBanner.offsetHeight : 100)) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
+    function syncHeaderState() {
+        if (!header) return;
+
+        const threshold = emergencyBanner ? emergencyBanner.offsetHeight : 0;
+        const shouldStayPinned = isSubpage || window.scrollY > threshold;
+
+        header.classList.toggle('scrolled', shouldStayPinned);
+    }
+
+    updateMobileHeaderOffset();
+    syncHeaderState();
+
+    window.addEventListener('scroll', syncHeaderState, { passive: true });
+    window.addEventListener('resize', () => {
+        updateMobileHeaderOffset();
+        syncHeaderState();
     });
+
+    if (window.visualViewport) {
+        window.visualViewport.addEventListener('resize', updateMobileHeaderOffset);
+    }
 
     // 3. FORM DEMO PREVENT DEFAULT
     const form = document.querySelector('.smart-form');
